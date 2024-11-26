@@ -1,0 +1,26 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "685cf4409255407e57e7af16ab955f23"
+application_url = "https://standup-ukraine-v2.herokuapp.com/"
+embedded = true
+name = "axe-commerce-suu-custom-v3"
+handle = "axe-commerce-suu-custom-v3"
+
+[webhooks]
+api_version = "2022-01"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+[auth]
+redirect_urls = [
+  "https://standup-ukraine-v2.herokuapp.com/auth/callback",
+  "https://standup-ukraine-v2.herokuapp.com/auth/inline",
+  "https://standup-ukraine-v2.herokuapp.com/homepage",
+  "https://standup-ukraine-v2.herokuapp.com/",
+  "https://standup-ukraine-v2.herokuapp.com:3456/"
+]
+
+[pos]
+embedded = false
