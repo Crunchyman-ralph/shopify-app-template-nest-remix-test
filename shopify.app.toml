@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "685cf4409255407e57e7af16ab955f23"
-application_url = "https://standup-ukraine-v2.herokuapp.com/"
+application_url = "https://modular-requirements-bow-buck.trycloudflare.com"
 embedded = true
 name = "axe-commerce-suu-custom-v3"
 handle = "axe-commerce-suu-custom-v3"
@@ -15,12 +15,14 @@ api_version = "2022-01"
 
 [auth]
 redirect_urls = [
-  "https://standup-ukraine-v2.herokuapp.com/auth/callback",
-  "https://standup-ukraine-v2.herokuapp.com/auth/inline",
-  "https://standup-ukraine-v2.herokuapp.com/homepage",
-  "https://standup-ukraine-v2.herokuapp.com/",
-  "https://standup-ukraine-v2.herokuapp.com:3456/"
+  "https://modular-requirements-bow-buck.trycloudflare.com/auth/callback",
+  "https://modular-requirements-bow-buck.trycloudflare.com/auth/shopify/callback",
+  "https://modular-requirements-bow-buck.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
 embedded = false
+
+[build]
+dev_store_url = "axe-commerce-test-store.myshopify.com"
+automatically_update_urls_on_dev = true

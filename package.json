@@ -1,9 +1,12 @@
 {
   "name": "axe-commerce-suu-custom-v3",
-  "private": true,
+  "private": false,
   "scripts": {
     "build": "remix vite:build",
     "dev": "shopify app dev",
+    "nest:dev": "nodemon --exec tsx src/main.ts",
+    "nest:build": "tsc",
+    "nest:start": "node dist/main.js",
     "config:link": "shopify app config link",
     "generate": "shopify app generate",
     "deploy": "shopify app deploy",
@@ -23,8 +26,12 @@
     "node": "^18.20 || ^20.10 || >=21.0.0"
   },
   "dependencies": {
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/core": "^10.0.0",
+    "@nestjs/platform-express": "^10.0.0",
     "@prisma/client": "^5.11.0",
     "@remix-run/dev": "^2.7.1",
+    "@remix-run/express": "^2.8.1",
     "@remix-run/node": "^2.7.1",
     "@remix-run/react": "^2.7.1",
     "@remix-run/serve": "^2.7.1",
@@ -47,7 +54,9 @@
     "@types/react-dom": "^18.2.14",
     "eslint": "^8.42.0",
     "eslint-config-prettier": "^9.1.0",
+    "nodemon": "^3.1.0",
     "prettier": "^3.2.4",
+    "tsx": "^4.7.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.3"
   },
